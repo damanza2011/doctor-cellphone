@@ -1,0 +1,16 @@
+{
+  "name": "Doctor Cellphone · Omar Dias",
+  "short_name": "DrCellphone",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0A0E17",
+  "theme_color": "#FFC700",
+  "description": "Servicio Técnico y Mantenimiento de Celulares y Computadores en Barranquilla (C.C. Miramar Sótano Local 3)",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

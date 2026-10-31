@@ -1,0 +1,20 @@
+{
+  "name": "doctor-cellphone-web",
+  "version": "1.0.0",
+  "description": "Sitio web de Doctor Cellphone - Omar Dias · Servicio Técnico & Mantenimiento Especializado en C.C. Miramar Barranquilla",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "reparacion",
+    "celulares",
+    "barranquilla",
+    "mantenimiento",
+    "mac",
+    "iphone",
+    "miramar"
+  ],
+  "author": "Omar Dias",
+  "license": "MIT"
+}
