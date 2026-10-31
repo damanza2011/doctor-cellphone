@@ -12,6 +12,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+  <!-- Cache Buster Meta Tags -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/img/doctor-cellphone-logo.png" />
@@ -52,8 +57,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Custom CSS (Versionado con Cache Buster para actualización inmediata en móviles) -->
+  <link rel="stylesheet" href="assets/css/style.css?v=20261031_v3" />
 </head>
 <body class="bg-dark-bg text-slate-100 selection:bg-doc-yellow selection:text-slate-950 bg-cyber-grid pb-12 sm:pb-0">
 
@@ -882,7 +887,7 @@
 
   </div>
 
-  <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
+  <!-- Scripts con Cache Buster -->
+  <script src="assets/js/main.js?v=20261031_v3"></script>
 </body>
 </html>
