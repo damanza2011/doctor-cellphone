@@ -1,13 +1,14 @@
 /* Doctor Cellphone - High Tech Design System
+   Optimizado para Móviles (QR Mostrador) y Escritorio
    Inspirado en SALMAN, AV8TOR, UMBRAL y VALERIA
    Paleta: Amarillo Doctor Cellphone (#FFC700), Azul Técnico (#0D47A1), Carbón (#0A0E17), Cian (#00F0FF)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --yellow-main: #FFC700;
-  --yellow-glow: rgba(255, 199, 0, 0.45);
+  --yellow-glow: rgba(255, 199, 0, 0.35);
   --yellow-soft: #FFF4C2;
   --blue-brand: #0D47A1;
   --blue-electric: #1E6FFF;
@@ -22,12 +23,19 @@
   --text-muted: #94A3B8;
 }
 
+/* Base Mobile Optimizations */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-primary);
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 .font-tech {
@@ -40,7 +48,8 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #070B12;
@@ -55,21 +64,20 @@ body {
 
 /* Cyber Glows & Borders */
 .glow-yellow {
-  box-shadow: 0 0 25px rgba(255, 199, 0, 0.25);
+  box-shadow: 0 0 20px rgba(255, 199, 0, 0.25);
 }
 
 .glow-yellow-hover:hover {
-  box-shadow: 0 0 30px rgba(255, 199, 0, 0.4);
+  box-shadow: 0 0 25px rgba(255, 199, 0, 0.4);
   border-color: var(--yellow-main);
-  transform: translateY(-2px);
 }
 
 .glow-blue {
-  box-shadow: 0 0 25px rgba(13, 71, 161, 0.45);
+  box-shadow: 0 0 20px rgba(13, 71, 161, 0.4);
 }
 
 .glow-cyan {
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
 }
 
 .border-glow-yellow {
@@ -77,26 +85,26 @@ body {
 }
 
 .bg-glass {
-  background: rgba(17, 24, 39, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(10, 14, 23, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .bg-glass-card {
-  background: rgba(24, 34, 52, 0.65);
-  backdrop-filter: blur(12px);
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Grid Background */
 .bg-cyber-grid {
-  background-size: 40px 40px;
+  background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
 }
 
-/* Pulse animation */
+/* Pulse Animation */
 @keyframes pulse-ring {
   0% { transform: scale(0.95); opacity: 0.8; }
   50% { transform: scale(1.15); opacity: 0.3; }
@@ -110,7 +118,7 @@ body {
 /* Oscilloscope Line Animation */
 @keyframes scanline {
   0% { transform: translateY(-100%); }
-  100% { transform: translateY(1000%); }
+  100% { transform: translateY(800%); }
 }
 
 .scanline-effect {
@@ -120,63 +128,91 @@ body {
 .scanline-effect::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; height: 3px;
+  top: 0; left: 0; right: 0; height: 2px;
   background: linear-gradient(90deg, transparent, var(--cyan-neon), transparent);
-  animation: scanline 4s linear infinite;
-  opacity: 0.6;
+  animation: scanline 5s linear infinite;
+  opacity: 0.5;
 }
 
 /* Tab active indicator */
 .filter-tab.active {
-  background: var(--yellow-main);
-  color: #0A0E17;
+  background: var(--yellow-main) !important;
+  color: #0A0E17 !important;
   font-weight: 700;
-  box-shadow: 0 0 15px rgba(255, 199, 0, 0.4);
-}
-
-/* Custom Tooltips */
-.badge-tag {
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  box-shadow: 0 0 12px rgba(255, 199, 0, 0.4);
 }
 
 /* Modal Backdrop */
 .modal-overlay {
-  background-color: rgba(6, 10, 18, 0.85);
+  background-color: rgba(6, 10, 18, 0.88);
   backdrop-filter: blur(8px);
 }
 
-/* Floating AI Chat */
+/* Floating AI Chat - Optimizado para no tapar contenido */
 .chat-launcher {
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  touch-action: manipulation;
 }
 .chat-launcher:hover {
-  transform: scale(1.08) rotate(3deg);
+  transform: scale(1.08);
+}
+.chat-launcher:active {
+  transform: scale(0.95);
 }
 
 /* Toast Notifications */
 #toast-container {
   position: fixed;
-  bottom: 24px;
-  left: 24px;
+  bottom: 80px;
+  left: 16px;
+  right: 16px;
   z-index: 99999;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  pointer-events: none;
+}
+@media (min-width: 640px) {
+  #toast-container {
+    left: 24px;
+    right: auto;
+    bottom: 24px;
+    max-width: 380px;
+  }
 }
 .toast {
   background: #111827;
   border: 1px solid var(--yellow-main);
   color: #F8FAFC;
-  padding: 12px 18px;
+  padding: 10px 14px;
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   animation: slideIn 0.3s ease-out;
+  pointer-events: auto;
+  font-size: 13px;
 }
 @keyframes slideIn {
-  from { transform: translateX(-100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Mobile Typography & Touch Utilities */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.85rem !important;
+    line-height: 1.25 !important;
+  }
+  .hero-tagline {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+  }
+  .mobile-compact-header {
+    height: 60px !important;
+  }
+  .mobile-touch-target {
+    min-height: 44px;
+  }
 }

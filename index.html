@@ -2,14 +2,20 @@
 <html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doctor Cellphone · Servicio Técnico y Mantenimiento de Celulares y Computadores | Barranquilla</title>
-  <meta name="description" content="Servicio técnico especializado en mantenimiento preventivo, microsoldadura y reparación de celulares (iPhone, Android), Mac y PC en Barranquilla. Omar Dias. C.C. Miramar Sótano Local 3. WhatsApp 304 4010187." />
-  <meta name="keywords" content="reparacion celulares barranquilla, doctor cellphone, omar dias, mantenimiento computadores mac, centro comercial miramar, cambio pantalla iphone, celular mojado barranquilla" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Doctor Cellphone · Servicio Técnico y Mantenimiento de Celulares y Computadores | C.C. Miramar Barranquilla</title>
+  <meta name="description" content="Servicio técnico especializado en mantenimiento preventivo, microsoldadura y reparación de celulares (iPhone, Android), Mac y PC en Barranquilla. Omar Dias. C.C. Miramar Sótano Local 3. WhatsApp: 304 4010187." />
+  <meta name="keywords" content="reparacion celulares barranquilla, doctor cellphone, omar dias, mantenimiento computadores mac, centro comercial miramar, cambio pantalla iphone, celular mojado barranquilla, pasta termica artic" />
   <meta name="author" content="Omar Dias · Doctor Cellphone" />
+  <meta name="theme-color" content="#0A0E17" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/img/doctor-cellphone-logo.png" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,7 +37,7 @@
             'dark-border': '#1E293B'
           },
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             tech: ['"Chakra Petch"', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace']
           }
@@ -43,73 +49,65 @@
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="bg-dark-bg text-slate-100 selection:bg-doc-yellow selection:text-slate-950 bg-cyber-grid">
+<body class="bg-dark-bg text-slate-100 selection:bg-doc-yellow selection:text-slate-950 bg-cyber-grid pb-12 sm:pb-0">
 
-  <!-- TOP BAR: Estado del Taller en Vivo & Contacto Inmediato -->
-  <div class="bg-slate-950 border-b border-slate-800/80 text-xs py-2 px-4 sticky top-0 z-50 backdrop-blur-md bg-opacity-90">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center gap-3">
-        <!-- Live status -->
-        <div id="workshop-status">
-          <span class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            Taller Abierto en C.C. Miramar · Sótano Local 3
-          </span>
-        </div>
-        <span class="hidden md:inline text-slate-500">|</span>
-        <span class="hidden md:inline text-slate-400">
-          <i class="fas fa-clock text-doc-yellow mr-1"></i> Lun - Sáb: 8:00 AM - 5:00 PM
+  <!-- TOP BAR: Estado en vivo compacto y legible en cualquier teléfono -->
+  <aside class="bg-slate-950 border-b border-slate-800/90 text-[11px] py-1.5 px-3 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-x-auto whitespace-nowrap">
+      
+      <!-- Live Workshop Status -->
+      <div id="workshop-status" class="flex items-center gap-1.5 shrink-0">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+          Abierto C.C. Miramar Local 3
         </span>
       </div>
 
-      <div class="flex items-center gap-4">
-        <!-- Google rating badge -->
-        <a href="https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhjemEzQXpibUppGAo" target="_blank" class="flex items-center gap-1.5 text-slate-300 hover:text-doc-yellow transition">
-          <i class="fab fa-google text-red-400 text-xs"></i>
-          <span class="font-bold text-amber-400">4.9</span>
-          <span class="text-amber-400">★★★★★</span>
-          <span class="text-[11px] text-slate-400 hidden sm:inline">(Google Miramar)</span>
+      <!-- Google & WhatsApp Contact -->
+      <div class="flex items-center gap-3 shrink-0 text-slate-400 font-mono text-[10px] sm:text-xs">
+        <a href="https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhjemEzQXpibUppGAo" target="_blank" class="flex items-center gap-1 text-amber-400 hover:underline">
+          <i class="fab fa-google text-red-400"></i>
+          <span class="font-bold">4.9 ★</span>
         </a>
-
-        <span class="text-slate-600">|</span>
-
-        <!-- Direct WhatsApp -->
-        <a href="https://wa.me/573044010187?text=Hola%20Omar%20Dias%20(Doctor%20Cellphone),%20necesito%20informaci%C3%B3n%20sobre%20un%20servicio%20t%C3%A9cnico" target="_blank" class="flex items-center gap-1.5 font-bold text-emerald-400 hover:text-emerald-300 transition">
-          <i class="fab fa-whatsapp text-sm"></i>
-          <span>+57 304 4010187</span>
+        <span class="text-slate-700">|</span>
+        <a href="https://wa.me/573044010187?text=Hola%20Omar%20Dias%20(Doctor%20Cellphone),%20escane%C3%A9%20el%20c%C3%B3digo%20QR%20en%20el%20mostrador%20y%20necesito%20atenci%C3%B3n" target="_blank" class="flex items-center gap-1 text-emerald-400 font-bold hover:text-emerald-300">
+          <i class="fab fa-whatsapp"></i>
+          <span>304 4010187</span>
         </a>
       </div>
-    </div>
-  </div>
 
-  <!-- NAVIGATION HEADER -->
-  <header class="border-b border-slate-800 bg-dark-bg/90 backdrop-blur-xl sticky top-[37px] z-40 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    </div>
+  </aside>
+
+  <!-- NAVIGATION HEADER: Compacto, sticky y 100% optimizado para móviles -->
+  <header class="border-b border-slate-800 bg-dark-bg/95 backdrop-blur-md sticky top-0 z-40 transition-all">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+      
       <!-- Brand Logo -->
-      <a href="#hero" class="flex items-center gap-3.5 group">
-        <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-doc-yellow glow-yellow group-hover:scale-105 transition-transform duration-300 shrink-0">
+      <a href="#hero" class="flex items-center gap-2.5 sm:gap-3.5 group min-w-0">
+        <div class="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-doc-yellow glow-yellow group-hover:scale-105 transition-transform shrink-0">
           <img src="assets/img/doctor-cellphone-logo.png" alt="Doctor Cellphone Logo" class="w-full h-full object-cover" />
         </div>
-        <div>
-          <div class="flex items-center gap-2">
-            <span class="font-tech text-xl font-bold tracking-wider text-white group-hover:text-doc-yellow transition">DOCTOR CELLPHONE</span>
-            <span class="px-2 py-0.5 text-[10px] font-mono font-bold uppercase rounded bg-doc-blue text-white tracking-widest border border-blue-400/30">LAB</span>
+        <div class="truncate">
+          <div class="flex items-center gap-1.5">
+            <span class="font-tech text-base sm:text-xl font-bold tracking-wider text-white group-hover:text-doc-yellow transition truncate">DOCTOR CELLPHONE</span>
+            <span class="hidden sm:inline px-1.5 py-0.2 text-[9px] font-mono font-bold uppercase rounded bg-doc-blue text-white tracking-widest border border-blue-400/30">LAB</span>
           </div>
-          <p class="text-[11px] text-slate-400 font-mono tracking-wide">OMAR DIAS · C.C. MIRAMAR SÓTANO LOCAL 3</p>
+          <p class="text-[10px] sm:text-[11px] text-slate-400 font-mono tracking-tight truncate">OMAR DIAS · C.C. MIRAMAR SÓTANO LOCAL 3</p>
         </div>
       </a>
 
       <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="#mantenimiento" class="text-doc-yellow hover:text-doc-yellow-light flex items-center gap-1.5 font-semibold">
-          <i class="fas fa-screwdriver-wrench text-xs"></i> Mantenimiento
-          <span class="px-1.5 py-0.2 text-[9px] font-mono bg-doc-yellow text-slate-950 font-bold rounded">TOP</span>
+      <nav class="hidden lg:flex items-center gap-5 text-xs font-semibold text-slate-300">
+        <a href="#mantenimiento" class="text-doc-yellow hover:text-doc-yellow-light flex items-center gap-1">
+          <i class="fas fa-screwdriver-wrench text-[10px]"></i> Mantenimiento
+          <span class="px-1.5 py-0.2 text-[8px] font-mono bg-doc-yellow text-slate-950 font-bold rounded">TOP</span>
         </a>
         <a href="#servicios" class="hover:text-doc-yellow transition">Servicios</a>
         <a href="#cotizador" class="hover:text-doc-yellow transition">Cotizador en Vivo</a>
@@ -120,97 +118,97 @@
       </nav>
 
       <!-- Action Buttons -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2 shrink-0">
         <!-- Cart Button -->
-        <button id="open-cart-btn" class="relative p-2.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-doc-yellow text-slate-200 hover:text-doc-yellow transition">
-          <i class="fas fa-shopping-bag text-base"></i>
-          <span id="cart-badge" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-doc-yellow text-slate-950 text-[10px] font-bold font-mono flex items-center justify-center border-2 border-dark-bg" style="display: none;">0</span>
+        <button id="open-cart-btn" aria-label="Ver carrito" class="relative p-2 sm:p-2.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-doc-yellow text-slate-200 hover:text-doc-yellow transition">
+          <i class="fas fa-shopping-bag text-sm sm:text-base"></i>
+          <span id="cart-badge" class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-doc-yellow text-slate-950 text-[9px] font-bold font-mono flex items-center justify-center border border-dark-bg" style="display: none;">0</span>
         </button>
 
         <!-- CTA WhatsApp Button -->
-        <a href="https://wa.me/573044010187?text=Hola%20Omar%20Dias,%20quiero%20cotizar%20un%20mantenimiento%20para%20mi%20equipo" target="_blank" class="px-4 py-2.5 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2 shadow-lg shadow-yellow-500/20 hover:scale-105">
+        <a href="https://wa.me/573044010187?text=Hola%20Omar%20Dias,%20estoy%20en%20el%20mostrador%20del%20C.C.%20Miramar%20y%20quiero%20cotizar%20un%20servicio" target="_blank" class="px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold text-xs uppercase tracking-wider transition flex items-center gap-1.5 shadow-md shadow-yellow-500/20 active:scale-95">
           <i class="fab fa-whatsapp text-sm"></i>
-          <span class="hidden sm:inline">Cotizar por</span> WhatsApp
+          <span class="hidden sm:inline">WhatsApp</span>
         </a>
       </div>
+
     </div>
   </header>
 
-  <!-- HERO SECTION: Cyberpunk / High-Tech Lab Aesthetic -->
-  <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+  <!-- HERO SECTION: Ultra legible en celulares y potente en escritorio -->
+  <section id="hero" class="relative pt-6 pb-12 sm:pt-16 sm:pb-24 overflow-hidden">
     <!-- Ambient Glows -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-doc-blue/20 rounded-full blur-[140px] pointer-events-none"></div>
-    <div class="absolute top-1/3 right-10 w-96 h-96 bg-doc-yellow/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-80 h-80 sm:w-[600px] sm:h-[600px] bg-doc-blue/20 rounded-full blur-[100px] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         <!-- Left Column: Copy & Value Proposition -->
         <div class="lg:col-span-7 text-center lg:text-left">
           
           <!-- Badge -->
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-doc-yellow/40 text-doc-yellow text-xs font-mono font-semibold mb-6 shadow-inner">
-            <i class="fas fa-microchip text-xs"></i>
-            <span>LABORATORIO DE MICROELECTRÓNICA & MANTENIMIENTO QUIRÚRGICO</span>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/95 border border-doc-yellow/50 text-doc-yellow text-[10px] sm:text-xs font-mono font-semibold mb-4 shadow-sm max-w-full truncate">
+            <i class="fas fa-microchip text-[11px] shrink-0"></i>
+            <span class="truncate">LABORATORIO DE MICROELECTRÓNICA & MANTENIMIENTO</span>
           </div>
 
           <!-- Main Title -->
-          <h1 class="font-tech text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            Mantenimiento Experto & <br/>
+          <h1 class="font-tech text-2xl sm:text-4xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+            Mantenimiento Experto & <br class="hidden sm:inline"/>
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-doc-yellow via-amber-300 to-doc-cyan">
               Reparación de Alta Precisión
-            </span> <br/>
+            </span> <br class="hidden sm:inline"/>
             para Celulares, Mac y PC.
           </h1>
 
           <!-- Subtitle -->
-          <p class="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-sans leading-relaxed">
+          <p class="hero-tagline mt-4 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto lg:mx-0 font-sans leading-relaxed">
             Bajo el liderazgo de <strong class="text-white">Omar Dias</strong>, <strong>Doctor Cellphone</strong> es el centro técnico de referencia en Barranquilla para mantenimiento preventivo, cambio de pantallas originales, microelectrónica y rescate de equipos mojados o dados por perdidos.
           </p>
 
-          <!-- Address Highlight -->
-          <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-mono text-slate-400">
-            <span class="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
+          <!-- Address & Benefit Highlights -->
+          <div class="mt-5 flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 text-xs font-mono text-slate-300">
+            <span class="flex items-center gap-1.5 bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-800">
               <i class="fas fa-map-pin text-doc-yellow"></i> C.C. Miramar · Sótano Local 3
             </span>
-            <span class="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
-              <i class="fas fa-shield-halved text-emerald-400"></i> Garantía Escrita de 30 a 90 días
+            <span class="flex items-center gap-1.5 bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-800">
+              <i class="fas fa-bolt text-doc-cyan"></i> Express en 45 min
             </span>
-            <span class="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
-              <i class="fas fa-bolt text-doc-cyan"></i> Mantenimiento Express en 45 min
+            <span class="flex items-center gap-1.5 bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-800">
+              <i class="fas fa-shield-halved text-emerald-400"></i> Garantía 30 a 90 días
             </span>
           </div>
 
-          <!-- Action Buttons -->
-          <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-            <a href="#mantenimiento" class="px-6 py-3.5 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold text-sm tracking-wide transition flex items-center gap-2.5 shadow-xl shadow-yellow-500/20 hover:scale-105">
+          <!-- Action Buttons (Diseñados con Safe Area para no ser tapados por el bot) -->
+          <div class="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3">
+            <a href="#mantenimiento" class="mobile-touch-target px-6 py-3.5 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold text-sm tracking-wide transition flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/20 active:scale-95">
               <i class="fas fa-screwdriver-wrench"></i> Ver Planes de Mantenimiento
             </a>
-            <a href="#cotizador" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm border border-slate-700 hover:border-doc-yellow transition flex items-center gap-2">
+            <a href="#cotizador" class="mobile-touch-target px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm border border-slate-700 hover:border-doc-yellow transition flex items-center justify-center gap-2">
               <i class="fas fa-calculator text-doc-yellow"></i> Cotizar en Vivo
             </a>
-            <a href="#rastreador" class="px-5 py-3.5 rounded-xl bg-slate-950/80 hover:bg-slate-900 text-slate-300 hover:text-doc-cyan font-mono text-xs border border-slate-800 transition flex items-center gap-2">
+            <a href="#rastreador" class="mobile-touch-target px-4 py-3 rounded-xl bg-slate-950/80 hover:bg-slate-900 text-slate-300 hover:text-doc-cyan font-mono text-xs border border-slate-800 transition flex items-center justify-center gap-1.5">
               <i class="fas fa-barcode"></i> Rastrear Ticket
             </a>
           </div>
 
           <!-- Counters / Metrics Strip -->
-          <div class="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center lg:text-left">
+          <div class="mt-8 pt-6 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center lg:text-left">
             <div>
-              <p class="font-tech text-2xl sm:text-3xl font-extrabold text-doc-yellow">+12,500</p>
-              <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-mono">Dispositivos Reparados</p>
+              <p class="font-tech text-xl sm:text-3xl font-extrabold text-doc-yellow">+12,500</p>
+              <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Reparaciones</p>
             </div>
             <div>
-              <p class="font-tech text-2xl sm:text-3xl font-extrabold text-emerald-400">99.2%</p>
-              <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-mono">Éxito en Placas</p>
+              <p class="font-tech text-xl sm:text-3xl font-extrabold text-emerald-400">99.2%</p>
+              <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Éxito en Placas</p>
             </div>
             <div>
-              <p class="font-tech text-2xl sm:text-3xl font-extrabold text-doc-cyan">45 min</p>
-              <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-mono">Tiempo Promedio</p>
+              <p class="font-tech text-xl sm:text-3xl font-extrabold text-doc-cyan">45 min</p>
+              <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Tiempo Promedio</p>
             </div>
             <div>
-              <p class="font-tech text-2xl sm:text-3xl font-extrabold text-white">4.9 ★</p>
-              <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-mono">Google Reviews</p>
+              <p class="font-tech text-xl sm:text-3xl font-extrabold text-white">4.9 ★</p>
+              <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Google Reviews</p>
             </div>
           </div>
 
@@ -218,46 +216,43 @@
 
         <!-- Right Column: Interactive Diagnostic HUD & Hero Visual -->
         <div class="lg:col-span-5">
-          <div class="relative max-w-md mx-auto">
+          <div class="relative max-w-sm sm:max-w-md mx-auto">
             
-            <!-- Glow Frame -->
-            <div class="absolute -inset-1 bg-gradient-to-r from-doc-yellow via-doc-blue to-doc-cyan rounded-3xl blur-lg opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <div class="absolute -inset-1 bg-gradient-to-r from-doc-yellow via-doc-blue to-doc-cyan rounded-3xl blur opacity-30"></div>
             
-            <!-- Main Card Container -->
-            <div class="relative bg-slate-950 rounded-2xl border border-slate-800 p-6 shadow-2xl scanline-effect overflow-hidden">
+            <div class="relative bg-slate-950 rounded-2xl border border-slate-800 p-5 sm:p-6 shadow-2xl scanline-effect overflow-hidden">
               
-              <!-- Card Header -->
-              <div class="flex items-center justify-between pb-4 border-b border-slate-800">
-                <div class="flex items-center gap-2">
-                  <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
-                  <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
-                  <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                  <span class="text-xs font-mono text-slate-400 ml-2">BENCH_HUD_V2.0</span>
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800 text-xs font-mono">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+                  <span class="text-slate-400 ml-1.5">BENCH_HUD_V2.0</span>
                 </div>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">ONLINE</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">ONLINE</span>
               </div>
 
               <!-- Character Badge Display -->
-              <div class="my-6 text-center">
+              <div class="my-4 text-center">
                 <div class="relative inline-block">
-                  <div class="w-44 h-44 mx-auto rounded-full p-1.5 bg-gradient-to-tr from-doc-yellow via-amber-400 to-doc-blue shadow-2xl">
+                  <div class="w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full p-1 bg-gradient-to-tr from-doc-yellow via-amber-400 to-doc-blue shadow-xl">
                     <img src="assets/img/doctor-cellphone-logo.png" alt="Doctor Cellphone Omar Dias" class="w-full h-full object-cover rounded-full" />
                   </div>
-                  <span class="absolute bottom-2 right-4 px-2.5 py-1 rounded-full bg-doc-yellow text-slate-950 font-bold text-[10px] font-mono border-2 border-slate-950 shadow-md">
+                  <span class="absolute bottom-1 right-2 px-2.5 py-0.5 rounded-full bg-doc-yellow text-slate-950 font-bold text-[10px] font-mono border-2 border-slate-950 shadow">
                     OMAR DIAS
                   </span>
                 </div>
-                <h3 class="font-tech text-lg font-bold text-white mt-4">Laboratorio C.C. Miramar</h3>
-                <p class="text-xs text-slate-400 font-mono">Especialista en Microelectrónica y Mantenimiento Quirúrgico</p>
+                <h3 class="font-tech text-base sm:text-lg font-bold text-white mt-3">Laboratorio C.C. Miramar</h3>
+                <p class="text-xs text-slate-400 font-mono">Microelectrónica y Mantenimiento Quirúrgico</p>
               </div>
 
-              <!-- Simulated Oscilloscope & Telemetry Box -->
-              <div class="bg-slate-900/90 rounded-xl p-4 border border-slate-800 font-mono text-xs space-y-2.5">
+              <!-- Telemetry Box -->
+              <div class="bg-slate-900/90 rounded-xl p-3 sm:p-4 border border-slate-800 font-mono text-xs space-y-2">
                 <div class="flex justify-between items-center text-slate-400">
                   <span>CANAL 1 (VCC_MAIN):</span>
                   <span class="text-doc-yellow font-bold">5.12 V / 2.38 A</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
                   <div class="bg-gradient-to-r from-doc-yellow to-doc-cyan h-full w-[88%] animate-pulse"></div>
                 </div>
 
@@ -265,17 +260,12 @@
                   <span>TEMPERATURA DISIPACIÓN:</span>
                   <span class="text-emerald-400 font-bold">36.4°C (ÓPTIMO)</span>
                 </div>
-
-                <div class="flex justify-between items-center text-slate-400 pt-1">
-                  <span>ESTADO DE BANCO:</span>
-                  <span class="text-doc-cyan font-bold">ESTERILIZACIÓN & SELLADO</span>
-                </div>
               </div>
 
-              <!-- Quick Direct Contact Button -->
-              <div class="mt-5">
-                <a href="https://wa.me/573044010187?text=Hola%20Omar%20Dias,%20vi%20el%20laboratorio%20en%20la%20web%20y%20quiero%20llevar%20mi%20equipo%20al%20C.C.%20Miramar" target="_blank" class="w-full py-2.5 rounded-xl bg-doc-blue hover:bg-blue-700 text-white font-bold text-xs font-mono uppercase tracking-wider transition flex items-center justify-center gap-2 border border-blue-400/40">
-                  <i class="fab fa-whatsapp text-sm text-emerald-400"></i> Contactar al Técnico Titular
+              <!-- Fast Contact Button -->
+              <div class="mt-4">
+                <a href="https://wa.me/573044010187?text=Hola%20Omar%20Dias,%20estoy%20en%20el%20mostrador%20y%20quiero%20entregar%20mi%20equipo%20en%20C.C.%20Miramar" target="_blank" class="w-full py-2.5 rounded-xl bg-doc-blue hover:bg-blue-700 text-white font-bold text-xs font-mono uppercase tracking-wider transition flex items-center justify-center gap-2 border border-blue-400/40">
+                  <i class="fab fa-whatsapp text-sm text-emerald-400"></i> Hablar con el Técnico en Turno
                 </a>
               </div>
 
@@ -291,316 +281,117 @@
        SECCIÓN ESTRELLA: EL CENTRO DE MANTENIMIENTO INTEGRAL
        "LO MAS IMPORTANTE ES EL MANTENIMIENTO"
        ============================================================ -->
-  <section id="mantenimiento" class="py-24 bg-gradient-to-b from-dark-bg via-slate-950 to-dark-bg relative border-t border-slate-800/80">
+  <section id="mantenimiento" class="py-16 sm:py-24 bg-gradient-to-b from-dark-bg via-slate-950 to-dark-bg relative border-t border-slate-800/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="px-3 py-1 rounded-full text-xs font-mono uppercase font-bold bg-doc-yellow/10 text-doc-yellow border border-doc-yellow/30 tracking-widest inline-block mb-3">
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <span class="px-3 py-1 rounded-full text-[10px] sm:text-xs font-mono uppercase font-bold bg-doc-yellow/10 text-doc-yellow border border-doc-yellow/30 tracking-widest inline-block mb-2 sm:mb-3">
           ESPECIALIDAD QUIRÚRGICA DOCTOR CELLPHONE
         </span>
-        <h2 class="font-tech text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+        <h2 class="font-tech text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
           Centro de Mantenimiento Preventivo & Correctivo
         </h2>
-        <p class="mt-4 text-base text-slate-300 font-sans">
+        <p class="mt-3 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
           El 85% de las fallas irreparables en celulares y computadores ocurren por falta de mantenimiento periódico. En nuestro laboratorio del C.C. Miramar protegemos tu inversión antes de que ocurra un daño definitivo.
         </p>
       </div>
 
       <!-- 4 Core Maintenance Pillars -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
         
         <!-- Pillar 1: Mantenimiento Preventivo Celulares -->
-        <div class="p-6 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-yellow transition duration-300 flex flex-col justify-between group shadow-xl">
+        <div class="p-5 sm:p-6 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-yellow transition duration-300 flex flex-col justify-between group shadow-xl">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-doc-yellow text-2xl mb-5 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-doc-yellow text-xl mb-4 group-hover:scale-110 transition-transform">
               <i class="fas fa-mobile-screen"></i>
             </div>
-            <span class="text-[11px] font-mono text-doc-yellow font-bold tracking-wider uppercase">iPhone & Android</span>
-            <h3 class="font-tech text-xl font-bold text-white mt-1">Mantenimiento Preventivo Quirúrgico</h3>
-            <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+            <span class="text-[10px] font-mono text-doc-yellow font-bold tracking-wider uppercase">iPhone & Android</span>
+            <h3 class="font-tech text-lg font-bold text-white mt-1">Mantenimiento Preventivo Quirúrgico</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
               Limpieza microscópica de mallas de altavoz, descontaminación de puerto Lightning/USB-C, eliminación de sulfato y pelusas, y reposición del sello hermético contra polvo y salpicaduras.
             </p>
-            <ul class="mt-4 space-y-2 text-xs text-slate-300 font-mono">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-doc-yellow text-[10px]"></i> Desobstrucción de audio al 100%</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-doc-yellow text-[10px]"></i> Prevención de cortos en puerto</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-doc-yellow text-[10px]"></i> Sellado hermético restaurado</li>
+            <ul class="mt-3 space-y-1.5 text-xs text-slate-300 font-mono">
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-doc-yellow text-[10px]"></i> Desobstrucción de audio al 100%</li>
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-doc-yellow text-[10px]"></i> Prevención de cortos en puerto</li>
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-doc-yellow text-[10px]"></i> Sellado hermético restaurado</li>
             </ul>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+          <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between">
             <span class="text-xs font-mono font-bold text-doc-yellow">Desde $35,000 COP</span>
-            <span class="text-[11px] text-slate-400 font-mono">Tiempo: ~40 min</span>
+            <span class="text-[10px] text-slate-400 font-mono">~40 min</span>
           </div>
         </div>
 
         <!-- Pillar 2: Mantenimiento Térmico Mac & PC -->
-        <div class="p-6 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-cyan transition duration-300 flex flex-col justify-between group shadow-xl relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-doc-cyan/10 px-3 py-1 rounded-bl-xl text-[10px] font-mono text-doc-cyan border-l border-b border-doc-cyan/30 font-bold">
+        <div class="p-5 sm:p-6 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-cyan transition duration-300 flex flex-col justify-between group shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-doc-cyan/10 px-2.5 py-0.5 rounded-bl-lg text-[9px] font-mono text-doc-cyan border-l border-b border-doc-cyan/30 font-bold">
             ALTO RENDIMIENTO
           </div>
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-sky-400/10 border border-sky-400/30 flex items-center justify-center text-doc-cyan text-2xl mb-5 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-sky-400/10 border border-sky-400/30 flex items-center justify-center text-doc-cyan text-xl mb-4 group-hover:scale-110 transition-transform">
               <i class="fas fa-laptop-code"></i>
             </div>
-            <span class="text-[11px] font-mono text-doc-cyan font-bold tracking-wider uppercase">MacBook & Laptops Gamer</span>
-            <h3 class="font-tech text-xl font-bold text-white mt-1">Mantenimiento Térmico y Disipación</h3>
-            <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-              Desarme minucioso de radiadores y turbinas. Reemplazo de pasta térmica reseca por compuesto de conductividad aeroespacial <strong>Artic MX-4</strong> o <strong>Thermal Grizzly</strong>.
+            <span class="text-[10px] font-mono text-doc-cyan font-bold tracking-wider uppercase">MacBook & Laptops Gamer</span>
+            <h3 class="font-tech text-lg font-bold text-white mt-1">Mantenimiento Térmico y Disipación</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Desarme minucioso de radiadores y turbinas. Reemplazo de pasta térmica reseca por compuesto aeroespacial <strong>Artic MX-4</strong> o <strong>Thermal Grizzly</strong>.
             </p>
-            <ul class="mt-4 space-y-2 text-xs text-slate-300 font-mono">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-doc-cyan text-[10px]"></i> Reducción de 15°C a 25°C</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-doc-cyan text-[10px]"></i> Eliminación de ruido y thermal throttling</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-doc-cyan text-[10px]"></i> Vida útil extendida para CPU/GPU</li>
+            <ul class="mt-3 space-y-1.5 text-xs text-slate-300 font-mono">
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-doc-cyan text-[10px]"></i> Baja de 15°C a 25°C</li>
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-doc-cyan text-[10px]"></i> Cero ruido de turbinas</li>
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-doc-cyan text-[10px]"></i> Máxima vida útil de CPU/GPU</li>
             </ul>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+          <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between">
             <span class="text-xs font-mono font-bold text-doc-cyan">Desde $65,000 COP</span>
-            <span class="text-[11px] text-slate-400 font-mono">Tiempo: 1 - 2 horas</span>
+            <span class="text-[10px] text-slate-400 font-mono">1 - 2 horas</span>
           </div>
         </div>
 
         <!-- Pillar 3: Rescate por Inmersión / Celular Mojado -->
-        <div class="p-6 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-orange transition duration-300 flex flex-col justify-between group shadow-xl">
+        <div class="p-5 sm:p-6 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-orange transition duration-300 flex flex-col justify-between group shadow-xl">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-doc-orange text-2xl mb-5 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-doc-orange text-xl mb-4 group-hover:scale-110 transition-transform">
               <i class="fas fa-droplet"></i>
             </div>
-            <span class="text-[11px] font-mono text-doc-orange font-bold tracking-wider uppercase">Protocolo de Emergencia</span>
-            <h3 class="font-tech text-xl font-bold text-white mt-1">Rescate por Inmersión en Agua / Mar</h3>
-            <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-              Tratamiento en tina ultrasónica con alcohol isopropílico de 99.9% y desoxidantes químicos. Desoldadura de blindajes e inspección en microscopio para neutralizar la corrosión.
+            <span class="text-[10px] font-mono text-doc-orange font-bold tracking-wider uppercase">Protocolo de Emergencia</span>
+            <h3 class="font-tech text-lg font-bold text-white mt-1">Rescate por Agua o Mar</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Tina ultrasónica con alcohol isopropílico de 99.9% y desoxidantes químicos. Inspección estereoscópica para neutralizar la salinidad de playas y piscina.
             </p>
-            <ul class="mt-4 space-y-2 text-xs text-slate-300 font-mono">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-doc-orange text-[10px]"></i> Desconexión de energía inmediata</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-doc-orange text-[10px]"></i> Rescate de fotos y datos personales</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-doc-orange text-[10px]"></i> Eliminación de salitre de playas</li>
+            <ul class="mt-3 space-y-1.5 text-xs text-slate-300 font-mono">
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-doc-orange text-[10px]"></i> Desconexión inmediata</li>
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-doc-orange text-[10px]"></i> Rescate de fotos y datos</li>
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-doc-orange text-[10px]"></i> Cero mito del arroz</li>
             </ul>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+          <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between">
             <span class="text-xs font-mono font-bold text-doc-orange">Desde $75,000 COP</span>
-            <span class="text-[11px] text-slate-400 font-mono">Urgencia Inmediata</span>
+            <span class="text-[10px] text-slate-400 font-mono">Prioritario</span>
           </div>
         </div>
 
         <!-- Pillar 4: Microsoldadura Nivel 3 -->
-        <div class="p-6 rounded-2xl bg-dark-card border border-slate-800 hover:border-emerald-400 transition duration-300 flex flex-col justify-between group shadow-xl">
+        <div class="p-5 sm:p-6 rounded-2xl bg-dark-card border border-slate-800 hover:border-emerald-400 transition duration-300 flex flex-col justify-between group shadow-xl">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl mb-5 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4 group-hover:scale-110 transition-transform">
               <i class="fas fa-microscope"></i>
             </div>
-            <span class="text-[11px] font-mono text-emerald-400 font-bold tracking-wider uppercase">Microelectrónica Avanzada</span>
-            <h3 class="font-tech text-xl font-bold text-white mt-1">Microsoldadura & Placas Lógicas</h3>
-            <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-              Diagnóstico con cámara térmica infrarroja y multímetro digital. Reballing de ICs de carga (Tristar / Hydra), solución a cortos en líneas principales y reparación de Face ID.
+            <span class="text-[10px] font-mono text-emerald-400 font-bold tracking-wider uppercase">Microelectrónica Avanzada</span>
+            <h3 class="font-tech text-lg font-bold text-white mt-1">Microsoldadura & Placas</h3>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Diagnóstico con cámara térmica y multímetro digital. Reballing de ICs de carga (Tristar / Hydra / PMIC) y solución a cortos en líneas principales.
             </p>
-            <ul class="mt-4 space-y-2 text-xs text-slate-300 font-mono">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400 text-[10px]"></i> Solución a "No Enciende"</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400 text-[10px]"></i> Reballing y microsoldadura SMD</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400 text-[10px]"></i> Garantía extendida por escrito</li>
+            <ul class="mt-3 space-y-1.5 text-xs text-slate-300 font-mono">
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-400 text-[10px]"></i> Rescate de "No Enciende"</li>
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-400 text-[10px]"></i> Microsoldadura SMD</li>
+              <li class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-400 text-[10px]"></i> Garantía extendida</li>
             </ul>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+          <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between">
             <span class="text-xs font-mono font-bold text-emerald-400">Diagnóstico Preciso</span>
-            <span class="text-[11px] text-slate-400 font-mono">Omar Dias Titular</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Maintenance Comparison Checklist -->
-      <div class="mt-16 p-8 rounded-2xl bg-slate-900/60 border border-slate-800">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-4">
-            <span class="text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">Protocolo de 10 Puntos</span>
-            <h3 class="font-tech text-2xl font-bold text-white mt-1">¿Qué incluye cada mantenimiento en Doctor Cellphone?</h3>
-            <p class="text-xs text-slate-400 mt-2 font-sans">
-              No es una simple limpieza superficial. En el sótano de Miramar aplicamos protocolos de grado médico para electrónica.
-            </p>
-            <div class="mt-5">
-              <a href="https://wa.me/573044010187?text=Hola%20Omar,%20quiero%20agendar%20un%20mantenimiento%20completo%20para%20mi%20equipo" target="_blank" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold text-xs font-mono uppercase transition">
-                <i class="fab fa-whatsapp"></i> Agendar Mantenimiento Hoy
-              </a>
-            </div>
-          </div>
-          <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300 font-mono">
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-2.5">
-              <i class="fas fa-circle-check text-emerald-400 shrink-0"></i>
-              <span>1. Inspección visual estereoscópica inicial</span>
-            </div>
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-2.5">
-              <i class="fas fa-circle-check text-emerald-400 shrink-0"></i>
-              <span>2. Desoxigenación y lavado ultrasónico de puertos</span>
-            </div>
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-2.5">
-              <i class="fas fa-circle-check text-emerald-400 shrink-0"></i>
-              <span>3. Descontaminación de membranas acústicas</span>
-            </div>
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-2.5">
-              <i class="fas fa-circle-check text-emerald-400 shrink-0"></i>
-              <span>4. Medición de consumo con fuente regulada</span>
-            </div>
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-2.5">
-              <i class="fas fa-circle-check text-emerald-400 shrink-0"></i>
-              <span>5. Cambio de compuesto térmico de alto rendimiento</span>
-            </div>
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-2.5">
-              <i class="fas fa-circle-check text-emerald-400 shrink-0"></i>
-              <span>6. Lubricación y alineación de turbinas de disipación</span>
-            </div>
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-2.5">
-              <i class="fas fa-circle-check text-emerald-400 shrink-0"></i>
-              <span>7. Restauración de sello estanco IP68 contra agua/polvo</span>
-            </div>
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-2.5">
-              <i class="fas fa-circle-check text-emerald-400 shrink-0"></i>
-              <span>8. Calibración de batería y medición de ciclos</span>
-            </div>
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-2.5">
-              <i class="fas fa-circle-check text-emerald-400 shrink-0"></i>
-              <span>9. Pruebas de estrés térmico y sensores biométricos</span>
-            </div>
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-2.5">
-              <i class="fas fa-circle-check text-emerald-400 shrink-0"></i>
-              <span>10. Certificado de entrega y garantía escrita</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
-       CATÁLOGO DE SERVICIOS TÉCNICOS (CON FILTROS INTERACTIVOS)
-       ============================================================ -->
-  <section id="servicios" class="py-20 bg-dark-bg relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-        <div>
-          <span class="text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">Catálogo Completo</span>
-          <h2 class="font-tech text-3xl sm:text-4xl font-extrabold text-white mt-1">Servicios Técnicos Especializados</h2>
-          <p class="text-sm text-slate-400 font-sans mt-2">Diagnóstico transparente y repuestos testeados individualmente.</p>
-        </div>
-
-        <!-- Filter Tabs -->
-        <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono">
-          <button class="filter-tab active px-3.5 py-1.5 rounded-lg transition" data-filter="all">Todos</button>
-          <button class="filter-tab px-3.5 py-1.5 rounded-lg transition" data-filter="mantenimiento">Mantenimiento</button>
-          <button class="filter-tab px-3.5 py-1.5 rounded-lg transition" data-filter="celulares">Celulares</button>
-          <button class="filter-tab px-3.5 py-1.5 rounded-lg transition" data-filter="mac-pc">Mac & PC</button>
-          <button class="filter-tab px-3.5 py-1.5 rounded-lg transition" data-filter="microsoldadura">Microsoldadura</button>
-        </div>
-      </div>
-
-      <!-- Service Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Card 1 -->
-        <div class="service-item is-mantenimiento p-6 rounded-2xl bg-dark-card border border-slate-800/80 hover:border-doc-yellow transition duration-300" data-category="celulares">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-amber-400/10 text-doc-yellow font-bold">MANTENIMIENTO</span>
-            <span class="text-xs text-slate-400 font-mono">40 min</span>
-          </div>
-          <h3 class="font-tech text-xl font-bold text-white mt-4">Mantenimiento Celulares (iPhone & Android)</h3>
-          <p class="text-xs text-slate-400 mt-2 font-sans leading-relaxed">
-            Limpieza ultrasónica, descontaminación de conector de carga tipo C/Lightning, microcepillado de parlantes y cambio de sellado adhesivo.
-          </p>
-          <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-sm font-bold font-mono text-white">Desde $35,000 COP</span>
-            <a href="https://wa.me/573044010187?text=Hola%20Omar,%20quiero%20el%20mantenimiento%20para%20mi%20celular" target="_blank" class="text-xs font-bold text-doc-yellow hover:text-white transition flex items-center gap-1 font-mono">
-              Solicitar <i class="fas fa-chevron-right text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="service-item is-mantenimiento p-6 rounded-2xl bg-dark-card border border-slate-800/80 hover:border-doc-cyan transition duration-300" data-category="mac-pc">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-sky-400/10 text-doc-cyan font-bold">MANTENIMIENTO TÉRMICO</span>
-            <span class="text-xs text-slate-400 font-mono">1.5 horas</span>
-          </div>
-          <h3 class="font-tech text-xl font-bold text-white mt-4">Mantenimiento Mac & PC Portátil</h3>
-          <p class="text-xs text-slate-400 mt-2 font-sans leading-relaxed">
-            Eliminación de obstrucciones en turbinas disipadoras, cambio de pasta térmica por Artic MX-4 / Thermal Grizzly y lubricación de ventiladores.
-          </p>
-          <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-sm font-bold font-mono text-white">Desde $65,000 COP</span>
-            <a href="https://wa.me/573044010187?text=Hola%20Omar,%20quiero%20mantenimiento%20termico%20para%20mi%20computador" target="_blank" class="text-xs font-bold text-doc-cyan hover:text-white transition flex items-center gap-1 font-mono">
-              Solicitar <i class="fas fa-chevron-right text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="service-item p-6 rounded-2xl bg-dark-card border border-slate-800/80 hover:border-doc-yellow transition duration-300" data-category="celulares">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 font-bold">PANTALLAS ORIGINALES</span>
-            <span class="text-xs text-slate-400 font-mono">45 min</span>
-          </div>
-          <h3 class="font-tech text-xl font-bold text-white mt-4">Cambio de Pantalla OLED / AMOLED</h3>
-          <p class="text-xs text-slate-400 mt-2 font-sans leading-relaxed">
-            Pantallas de alta definición con transferencia de serial y programación True Tone en iPhone y 120Hz dinámicos en Samsung y Xiaomi.
-          </p>
-          <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-sm font-bold font-mono text-white">Desde $120,000 COP</span>
-            <a href="https://wa.me/573044010187?text=Hola%20Omar,%20quiero%20cotizar%20un%20cambio%20de%20pantalla" target="_blank" class="text-xs font-bold text-doc-yellow hover:text-white transition flex items-center gap-1 font-mono">
-              Solicitar <i class="fas fa-chevron-right text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="service-item p-6 rounded-2xl bg-dark-card border border-slate-800/80 hover:border-doc-yellow transition duration-300" data-category="celulares">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-amber-400/10 text-doc-yellow font-bold">BATERÍAS NUEVAS</span>
-            <span class="text-xs text-slate-400 font-mono">35 min</span>
-          </div>
-          <h3 class="font-tech text-xl font-bold text-white mt-4">Cambio de Batería (Condición 100%)</h3>
-          <p class="text-xs text-slate-400 mt-2 font-sans leading-relaxed">
-            Celdas Grado A+ ciclo cero con máxima capacidad de retención. En iPhones realizamos el trasplante de flex para evitar mensajes de aviso.
-          </p>
-          <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-sm font-bold font-mono text-white">Desde $80,000 COP</span>
-            <a href="https://wa.me/573044010187?text=Hola%20Omar,%20quiero%20cambiar%20la%20bateria%20de%20mi%20celular" target="_blank" class="text-xs font-bold text-doc-yellow hover:text-white transition flex items-center gap-1 font-mono">
-              Solicitar <i class="fas fa-chevron-right text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="service-item is-mantenimiento p-6 rounded-2xl bg-dark-card border border-slate-800/80 hover:border-doc-orange transition duration-300" data-category="microsoldadura">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-orange-500/10 text-doc-orange font-bold">URGENCIA / LÍQUIDOS</span>
-            <span class="text-xs text-slate-400 font-mono">2 - 4 horas</span>
-          </div>
-          <h3 class="font-tech text-xl font-bold text-white mt-4">Rescate de Celular / Mac Mojado</h3>
-          <p class="text-xs text-slate-400 mt-2 font-sans leading-relaxed">
-            Desoxigenación en tina ultrasónica, secado dieléctrico y reparación de líneas sulfatadas antes de que la corrosión destruya el procesador.
-          </p>
-          <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-sm font-bold font-mono text-white">Desde $75,000 COP</span>
-            <a href="https://wa.me/573044010187?text=Hola%20Omar,%20mi%20equipo%20se%20acaba%20de%20mojar,%20ayuda" target="_blank" class="text-xs font-bold text-doc-orange hover:text-white transition flex items-center gap-1 font-mono">
-              Emergencia <i class="fas fa-chevron-right text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="service-item p-6 rounded-2xl bg-dark-card border border-slate-800/80 hover:border-emerald-400 transition duration-300" data-category="microsoldadura">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 font-bold">MICROSOLDADURA</span>
-            <span class="text-xs text-slate-400 font-mono">24 - 48 horas</span>
-          </div>
-          <h3 class="font-tech text-xl font-bold text-white mt-4">Reparación de Placa Madre Nivel 3</h3>
-          <p class="text-xs text-slate-400 mt-2 font-sans leading-relaxed">
-            Reballing de integrados, reemplazo de chip de carga (Tristar / Hydra / PMIC), solución a muerte súbita y fallas de señal o audio.
-          </p>
-          <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-sm font-bold font-mono text-white">Cotización en Banco</span>
-            <a href="https://wa.me/573044010187?text=Hola%20Omar,%20tengo%20un%20equipo%20que%20no%20enciende%20o%20tiene%20falla%20de%20placa" target="_blank" class="text-xs font-bold text-emerald-400 hover:text-white transition flex items-center gap-1 font-mono">
-              Consultar <i class="fas fa-chevron-right text-[10px]"></i>
-            </a>
+            <span class="text-[10px] text-slate-400 font-mono">Omar Dias</span>
           </div>
         </div>
 
@@ -610,46 +401,46 @@
   </section>
 
   <!-- ============================================================
-       COTIZADOR INTERACTIVO EN TIEMPO REAL (ESTIMADOR INTELIGENTE)
+       COTIZADOR INTERACTIVO EN TIEMPO REAL
        ============================================================ -->
-  <section id="cotizador" class="py-20 bg-slate-950 border-y border-slate-800 relative">
+  <section id="cotizador" class="py-16 sm:py-20 bg-slate-950 border-y border-slate-800 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         <!-- Left: Explanatory Copy -->
-        <div class="lg:col-span-5">
-          <span class="text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">TRANSPARENCIA TOTAL</span>
-          <h2 class="font-tech text-3xl sm:text-4xl font-extrabold text-white mt-1">Cotizador en Vivo para tu Dispositivo</h2>
-          <p class="text-sm text-slate-300 font-sans mt-3 leading-relaxed">
-            Selecciona la marca de tu celular o computador y la falla o mantenimiento requerido. Obtendrás un estimado en tiempo real en Pesos Colombianos (COP) que puedes enviar directamente a Omar Dias por WhatsApp para apartar tu turno.
+        <div class="lg:col-span-5 text-center lg:text-left">
+          <span class="text-[10px] sm:text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">TRANSPARENCIA TOTAL</span>
+          <h2 class="font-tech text-2xl sm:text-4xl font-extrabold text-white mt-1">Cotizador en Vivo para tu Dispositivo</h2>
+          <p class="text-xs sm:text-sm text-slate-300 font-sans mt-3 leading-relaxed">
+            Selecciona tu dispositivo y la necesidad técnica. Obtendrás un estimado en tiempo real en Pesos Colombianos (COP) que puedes enviar directamente a Omar Dias por WhatsApp para apartar tu turno.
           </p>
 
-          <div class="mt-6 space-y-3 font-mono text-xs text-slate-400">
+          <div class="mt-5 space-y-2.5 font-mono text-xs text-slate-400 inline-block text-left">
             <div class="flex items-center gap-2">
               <i class="fas fa-check-circle text-doc-yellow"></i>
-              <span>Diagnóstico inicial 100% gratuito al reparar</span>
+              <span>Diagnóstico inicial gratis al realizar reparación</span>
             </div>
             <div class="flex items-center gap-2">
               <i class="fas fa-check-circle text-doc-yellow"></i>
-              <span>Garantía por escrito de 30 a 90 días</span>
+              <span>Garantía escrita de 30 a 90 días</span>
             </div>
             <div class="flex items-center gap-2">
               <i class="fas fa-check-circle text-doc-yellow"></i>
-              <span>Atención directa en Sótano C.C. Miramar Local 3</span>
+              <span>Atención en mostrador C.C. Miramar Local 3</span>
             </div>
           </div>
         </div>
 
         <!-- Right: Interactive Calculator Card -->
         <div class="lg:col-span-7">
-          <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl relative">
+          <div class="p-5 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl relative">
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <!-- Select Brand -->
               <div>
-                <label class="block text-xs font-mono uppercase text-slate-400 font-bold mb-2">1. Selecciona el Dispositivo</label>
-                <select id="calc-brand" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-doc-yellow font-mono">
+                <label class="block text-xs font-mono uppercase text-slate-400 font-bold mb-1.5">1. Dispositivo</label>
+                <select id="calc-brand" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-3 py-3 text-xs sm:text-sm focus:outline-none focus:border-doc-yellow font-mono">
                   <option value="iphone" selected>Apple iPhone</option>
                   <option value="samsung">Samsung Galaxy (S, Z, A)</option>
                   <option value="xiaomi">Xiaomi / Redmi / POCO</option>
@@ -662,8 +453,8 @@
 
               <!-- Select Service -->
               <div>
-                <label class="block text-xs font-mono uppercase text-slate-400 font-bold mb-2">2. Servicio o Mantenimiento</label>
-                <select id="calc-service" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-doc-yellow font-mono">
+                <label class="block text-xs font-mono uppercase text-slate-400 font-bold mb-1.5">2. Falla o Mantenimiento</label>
+                <select id="calc-service" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl px-3 py-3 text-xs sm:text-sm focus:outline-none focus:border-doc-yellow font-mono">
                   <option value="mantenimiento-preventivo" selected>🛠️ Mantenimiento Preventivo Quirúrgico</option>
                   <option value="pantalla">📱 Cambio de Pantalla OLED / Original</option>
                   <option value="bateria">🔋 Cambio de Batería (Salud 100%)</option>
@@ -675,30 +466,30 @@
             </div>
 
             <!-- Result Box -->
-            <div class="mt-6 p-5 rounded-2xl bg-slate-950 border border-slate-800">
+            <div class="mt-5 p-4 sm:p-5 rounded-2xl bg-slate-950 border border-slate-800">
               <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800">
                 <span class="text-xs font-mono text-slate-400">Equipo: <strong id="calc-device-name" class="text-white">Apple iPhone</strong></span>
-                <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/30">
-                  <i class="fas fa-stopwatch mr-1"></i> Tiempo: <strong id="calc-time">40 - 50 min</strong>
+                <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30">
+                  <i class="fas fa-stopwatch mr-1"></i> <strong id="calc-time">40 - 50 min</strong>
                 </span>
               </div>
 
-              <div class="mt-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+              <div class="mt-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                 <span class="text-xs font-mono text-slate-400 uppercase">Estimado de Reparación:</span>
-                <span id="calc-price" class="font-tech text-3xl sm:text-4xl font-extrabold text-doc-yellow">
+                <span id="calc-price" class="font-tech text-2xl sm:text-4xl font-extrabold text-doc-yellow">
                   $45,000 COP
                 </span>
               </div>
 
-              <p id="calc-desc" class="text-xs text-slate-300 font-sans mt-3 leading-relaxed">
+              <p id="calc-desc" class="text-xs text-slate-300 font-sans mt-2 leading-relaxed">
                 Limpieza ultrasónica, descontaminación de puerto Lightning/USB-C, microcepillado de mallas y sello hermético.
               </p>
             </div>
 
             <!-- Action Button -->
-            <div class="mt-6">
-              <a id="calc-whatsapp-btn" href="#" target="_blank" class="w-full py-4 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold text-sm tracking-wider uppercase font-mono transition flex items-center justify-center gap-2 shadow-xl shadow-yellow-500/20">
-                <i class="fab fa-whatsapp text-lg"></i> Solicitar este Mantenimiento por WhatsApp
+            <div class="mt-5">
+              <a id="calc-whatsapp-btn" href="#" target="_blank" class="mobile-touch-target w-full py-3.5 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold text-xs uppercase font-mono tracking-wider transition flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/20 active:scale-95">
+                <i class="fab fa-whatsapp text-base"></i> Solicitar este Servicio por WhatsApp
               </a>
             </div>
 
@@ -713,32 +504,32 @@
   <!-- ============================================================
        RASTREADOR DE ÓRDENES DE SERVICIO EN VIVO (TICKET TRACKER)
        ============================================================ -->
-  <section id="rastreador" class="py-20 bg-dark-bg relative">
+  <section id="rastreador" class="py-16 sm:py-20 bg-dark-bg relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-mono uppercase text-doc-cyan font-bold tracking-widest">SISTEMA EN TIEMPO REAL</span>
-        <h2 class="font-tech text-3xl sm:text-4xl font-extrabold text-white mt-1">Rastreador de Reparación en Laboratorio</h2>
-        <p class="text-sm text-slate-400 font-sans mt-2">
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        <span class="text-[10px] sm:text-xs font-mono uppercase text-doc-cyan font-bold tracking-widest">SISTEMA EN TIEMPO REAL</span>
+        <h2 class="font-tech text-2xl sm:text-4xl font-extrabold text-white mt-1">Rastreador de Reparación en Laboratorio</h2>
+        <p class="text-xs sm:text-sm text-slate-400 font-sans mt-2">
           Ingresa el número de orden asignado en tu comprobante de recepción para consultar el avance técnico en tiempo real.
         </p>
       </div>
 
       <!-- Search Input Box -->
       <div class="max-w-xl mx-auto">
-        <div class="flex items-center gap-2 p-2 rounded-2xl bg-slate-900 border border-slate-700 shadow-2xl focus-within:border-doc-cyan transition">
-          <div class="pl-3 text-slate-400 font-mono text-sm">
+        <div class="flex items-center gap-2 p-1.5 sm:p-2 rounded-2xl bg-slate-900 border border-slate-700 shadow-xl focus-within:border-doc-cyan transition">
+          <div class="pl-2 sm:pl-3 text-slate-400 font-mono text-sm">
             <i class="fas fa-barcode"></i>
           </div>
-          <input type="text" id="order-input" placeholder="Ej: DOC-8921" class="flex-1 bg-transparent border-none text-white text-sm font-mono uppercase placeholder-slate-500 focus:outline-none px-2" />
-          <button id="order-search-btn" class="px-5 py-2.5 rounded-xl bg-doc-cyan hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase font-mono tracking-wider transition">
+          <input type="text" id="order-input" placeholder="Ej: DOC-8921" class="flex-1 bg-transparent border-none text-white text-xs sm:text-sm font-mono uppercase placeholder-slate-500 focus:outline-none px-2" />
+          <button id="order-search-btn" class="px-4 py-2.5 rounded-xl bg-doc-cyan hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase font-mono tracking-wider transition shrink-0">
             Consultar
           </button>
         </div>
 
         <!-- Demo Order Chips -->
-        <div class="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-slate-400">
-          <span>Órdenes de demostración:</span>
+        <div class="mt-3 flex flex-wrap items-center justify-center gap-2 text-[11px] font-mono text-slate-400">
+          <span>Ejemplos:</span>
           <button class="demo-order-btn px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-doc-yellow underline" data-code="DOC-8921">DOC-8921 (iPhone)</button>
           <button class="demo-order-btn px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-doc-cyan underline" data-code="DOC-5042">DOC-5042 (MacBook)</button>
           <button class="demo-order-btn px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-doc-orange underline" data-code="DOC-1105">DOC-1105 (Mojado)</button>
@@ -746,107 +537,107 @@
       </div>
 
       <!-- Dynamic Result Container (rendered by main.js) -->
-      <div id="order-result" class="max-w-4xl mx-auto mt-10 hidden"></div>
+      <div id="order-result" class="max-w-4xl mx-auto mt-8 hidden"></div>
 
     </div>
   </section>
 
   <!-- ============================================================
-       TIENDA DE ACCESORIOS DE TECNOLOGÍA (CON CARRITO INTERACTIVO)
+       TIENDA DE ACCESORIOS (CATÁLOGO + CARRITO)
        ============================================================ -->
-  <section id="tienda" class="py-20 bg-slate-950 border-t border-slate-800 relative">
+  <section id="tienda" class="py-16 sm:py-20 bg-slate-950 border-t border-slate-800 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
         <div>
-          <span class="text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">CALIDAD CERTIFICADA</span>
-          <h2 class="font-tech text-3xl sm:text-4xl font-extrabold text-white mt-1">Accesorios y Repuestos Premium</h2>
-          <p class="text-sm text-slate-400 font-sans mt-2">Productos probados en laboratorio para garantizar que no dañen la batería ni el circuito de carga.</p>
+          <span class="text-[10px] sm:text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">CALIDAD CERTIFICADA</span>
+          <h2 class="font-tech text-2xl sm:text-4xl font-extrabold text-white mt-1">Accesorios y Repuestos Premium</h2>
+          <p class="text-xs sm:text-sm text-slate-400 font-sans mt-1">Productos testeados en laboratorio para no degradar baterías ni puertos.</p>
         </div>
 
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-mono text-slate-400">Entrega en C.C. Miramar o Domicilio Barranquilla</span>
+        <div class="text-xs font-mono text-slate-400">
+          <i class="fas fa-truck text-doc-yellow mr-1"></i> Entrega en C.C. Miramar o Domicilio Barranquilla
         </div>
       </div>
 
       <!-- Products Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
 
         <!-- Product 1 -->
-        <div class="p-5 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-yellow transition duration-300 flex flex-col justify-between group">
+        <div class="p-3.5 sm:p-5 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-yellow transition duration-300 flex flex-col justify-between group">
           <div>
-            <div class="h-36 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-4xl text-doc-yellow mb-4 group-hover:scale-105 transition-transform">
+            <div class="h-28 sm:h-36 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-3xl sm:text-4xl text-doc-yellow mb-3 group-hover:scale-105 transition-transform">
               <i class="fas fa-plug-circle-bolt"></i>
             </div>
-            <span class="text-[10px] font-mono uppercase tracking-wider text-doc-yellow font-bold">Carga Rápida</span>
-            <h4 class="font-tech text-base font-bold text-white mt-1">Cargador GaN 35W Dual USB-C</h4>
-            <p class="text-xs text-slate-400 mt-2 font-sans">
-              Tecnología Nitruro de Galio. No calienta el teléfono y soporta PD 3.0 para iPhone, Samsung y Mac.
+            <span class="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-doc-yellow font-bold">Carga GaN</span>
+            <h4 class="font-tech text-xs sm:text-base font-bold text-white mt-1">Cargador 35W Dual USB-C</h4>
+            <p class="text-[11px] text-slate-400 mt-1 font-sans hidden sm:block">
+              Tecnología GaN que no sobrecalienta el circuito ni la batería.
             </p>
           </div>
-          <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-sm font-bold font-mono text-white">$48,000 COP</span>
-            <button onclick="addToCart('Cargador GaN 35W Dual USB-C', 48000)" class="px-3 py-1.5 rounded-lg bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 text-xs font-bold font-mono transition flex items-center gap-1.5">
+          <div class="mt-3 pt-2 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span class="text-xs sm:text-sm font-bold font-mono text-white">$48,000 COP</span>
+            <button onclick="addToCart('Cargador GaN 35W Dual USB-C', 48000)" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 text-[10px] sm:text-xs font-bold font-mono transition flex items-center justify-center gap-1">
               <i class="fas fa-plus"></i> Agregar
             </button>
           </div>
         </div>
 
         <!-- Product 2 -->
-        <div class="p-5 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-yellow transition duration-300 flex flex-col justify-between group">
+        <div class="p-3.5 sm:p-5 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-yellow transition duration-300 flex flex-col justify-between group">
           <div>
-            <div class="h-36 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-4xl text-doc-cyan mb-4 group-hover:scale-105 transition-transform">
+            <div class="h-28 sm:h-36 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-3xl sm:text-4xl text-doc-cyan mb-3 group-hover:scale-105 transition-transform">
               <i class="fas fa-cable-car"></i>
             </div>
-            <span class="text-[10px] font-mono uppercase tracking-wider text-doc-cyan font-bold">Alta Resistencia</span>
-            <h4 class="font-tech text-base font-bold text-white mt-1">Cable Blindado Kevlar 60W</h4>
-            <p class="text-xs text-slate-400 mt-2 font-sans">
-              Trenzado balístico anti-quiebre. Terminales reforzados en aleación de aluminio. Tipo C a C o C a Lightning.
+            <span class="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-doc-cyan font-bold">Blindado</span>
+            <h4 class="font-tech text-xs sm:text-base font-bold text-white mt-1">Cable Kevlar 60W</h4>
+            <p class="text-[11px] text-slate-400 mt-1 font-sans hidden sm:block">
+              Trenzado balístico anti-quiebre para Type-C o Lightning.
             </p>
           </div>
-          <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-sm font-bold font-mono text-white">$25,000 COP</span>
-            <button onclick="addToCart('Cable Blindado Kevlar 60W', 25000)" class="px-3 py-1.5 rounded-lg bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 text-xs font-bold font-mono transition flex items-center gap-1.5">
+          <div class="mt-3 pt-2 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span class="text-xs sm:text-sm font-bold font-mono text-white">$25,000 COP</span>
+            <button onclick="addToCart('Cable Blindado Kevlar 60W', 25000)" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 text-[10px] sm:text-xs font-bold font-mono transition flex items-center justify-center gap-1">
               <i class="fas fa-plus"></i> Agregar
             </button>
           </div>
         </div>
 
         <!-- Product 3 -->
-        <div class="p-5 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-yellow transition duration-300 flex flex-col justify-between group">
+        <div class="p-3.5 sm:p-5 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-yellow transition duration-300 flex flex-col justify-between group">
           <div>
-            <div class="h-36 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-4xl text-emerald-400 mb-4 group-hover:scale-105 transition-transform">
+            <div class="h-28 sm:h-36 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-3xl sm:text-4xl text-emerald-400 mb-3 group-hover:scale-105 transition-transform">
               <i class="fas fa-shield-virus"></i>
             </div>
-            <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Protección 9D</span>
-            <h4 class="font-tech text-base font-bold text-white mt-1">Vidrio Cerámica Privacidad / Antiespía</h4>
-            <p class="text-xs text-slate-400 mt-2 font-sans">
-              Bloqueo de visión lateral a 30°, cobertura total de borde a borde y revestimiento oleofóbico antihuellas.
+            <span class="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Privacidad 9D</span>
+            <h4 class="font-tech text-xs sm:text-base font-bold text-white mt-1">Vidrio Antiespía Cerámica</h4>
+            <p class="text-[11px] text-slate-400 mt-1 font-sans hidden sm:block">
+              Bloqueo lateral a 30° con protección anticaídas de borde a borde.
             </p>
           </div>
-          <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-sm font-bold font-mono text-white">$18,000 COP</span>
-            <button onclick="addToCart('Vidrio Cerámica Privacidad 9D', 18000)" class="px-3 py-1.5 rounded-lg bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 text-xs font-bold font-mono transition flex items-center gap-1.5">
+          <div class="mt-3 pt-2 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span class="text-xs sm:text-sm font-bold font-mono text-white">$18,000 COP</span>
+            <button onclick="addToCart('Vidrio Cerámica Privacidad 9D', 18000)" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 text-[10px] sm:text-xs font-bold font-mono transition flex items-center justify-center gap-1">
               <i class="fas fa-plus"></i> Agregar
             </button>
           </div>
         </div>
 
         <!-- Product 4 -->
-        <div class="p-5 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-yellow transition duration-300 flex flex-col justify-between group">
+        <div class="p-3.5 sm:p-5 rounded-2xl bg-dark-card border border-slate-800 hover:border-doc-yellow transition duration-300 flex flex-col justify-between group">
           <div>
-            <div class="h-36 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-4xl text-doc-orange mb-4 group-hover:scale-105 transition-transform">
+            <div class="h-28 sm:h-36 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-3xl sm:text-4xl text-doc-orange mb-3 group-hover:scale-105 transition-transform">
               <i class="fas fa-fan"></i>
             </div>
-            <span class="text-[10px] font-mono uppercase tracking-wider text-doc-orange font-bold">Mantenimiento PC</span>
-            <h4 class="font-tech text-base font-bold text-white mt-1">Pasta Térmica Artic MX-4 (4g)</h4>
-            <p class="text-xs text-slate-400 mt-2 font-sans">
-              Jeringa original de alta conductividad térmica para procesadores Intel, AMD Ryzen y GPUs Gamer.
+            <span class="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-doc-orange font-bold">Térmico PC</span>
+            <h4 class="font-tech text-xs sm:text-base font-bold text-white mt-1">Pasta Artic MX-4 (4g)</h4>
+            <p class="text-[11px] text-slate-400 mt-1 font-sans hidden sm:block">
+              Compuesto térmico de alta conductividad para CPUs y GPUs.
             </p>
           </div>
-          <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-sm font-bold font-mono text-white">$28,000 COP</span>
-            <button onclick="addToCart('Pasta Térmica Artic MX-4 4g', 28000)" class="px-3 py-1.5 rounded-lg bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 text-xs font-bold font-mono transition flex items-center gap-1.5">
+          <div class="mt-3 pt-2 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span class="text-xs sm:text-sm font-bold font-mono text-white">$28,000 COP</span>
+            <button onclick="addToCart('Pasta Térmica Artic MX-4 4g', 28000)" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 text-[10px] sm:text-xs font-bold font-mono transition flex items-center justify-center gap-1">
               <i class="fas fa-plus"></i> Agregar
             </button>
           </div>
@@ -860,68 +651,52 @@
   <!-- ============================================================
        SOBRE OMAR DIAS & EL LABORATORIO EN C.C. MIRAMAR
        ============================================================ -->
-  <section id="taller" class="py-24 bg-dark-bg relative">
+  <section id="taller" class="py-16 sm:py-24 bg-dark-bg relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <!-- Left: Image & Badge -->
         <div class="lg:col-span-5 text-center">
-          <div class="relative inline-block max-w-sm">
-            <div class="w-64 h-64 sm:w-80 sm:h-80 mx-auto rounded-3xl overflow-hidden border-4 border-doc-yellow shadow-2xl glow-yellow">
+          <div class="relative inline-block max-w-xs sm:max-w-sm">
+            <div class="w-52 h-52 sm:w-72 sm:h-72 mx-auto rounded-3xl overflow-hidden border-4 border-doc-yellow shadow-2xl glow-yellow">
               <img src="assets/img/avatar-omar.png" alt="Omar Dias Doctor Cellphone" class="w-full h-full object-cover" />
             </div>
-            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-800 px-5 py-2.5 rounded-2xl shadow-xl flex items-center gap-3 whitespace-nowrap">
-              <i class="fas fa-award text-doc-yellow text-lg"></i>
+            <div class="mt-3 bg-slate-950 border border-slate-800 px-4 py-2 rounded-xl shadow-lg inline-flex items-center gap-2.5">
+              <i class="fas fa-award text-doc-yellow text-base"></i>
               <div class="text-left font-mono">
                 <p class="text-xs font-bold text-white uppercase">Omar Dias</p>
-                <p class="text-[10px] text-slate-400">Técnico Titular en Microelectrónica</p>
+                <p class="text-[10px] text-slate-400">Técnico Titular · Microelectrónica</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Story & Laboratory Tools -->
-        <div class="lg:col-span-7">
-          <span class="text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">TRAYECTORIA Y CONFIANZA</span>
-          <h2 class="font-tech text-3xl sm:text-4xl font-extrabold text-white mt-1">
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <span class="text-[10px] sm:text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">TRAYECTORIA Y CONFIANZA</span>
+          <h2 class="font-tech text-2xl sm:text-4xl font-extrabold text-white mt-1">
             Tu Dispositivo en Manos de un Especialista Certificado
           </h2>
-          <p class="text-sm sm:text-base text-slate-300 font-sans mt-4 leading-relaxed">
+          <p class="text-xs sm:text-sm text-slate-300 font-sans mt-3 leading-relaxed">
             En un mercado lleno de talleres improvisados, <strong>Doctor Cellphone</strong> nació para brindar transparencia absoluta, honestidad en los diagnósticos y tecnología de banco de trabajo de última generación.
           </p>
-          <p class="text-sm text-slate-400 font-sans mt-3 leading-relaxed">
+          <p class="text-xs sm:text-sm text-slate-400 font-sans mt-2 leading-relaxed">
             Ubicados estratégicamente en el sótano del <strong>Centro Comercial Miramar (Local 3)</strong>, contamos con parqueadero vigilado, aire acondicionado y la tranquilidad de dejar tu celular o computador en un punto comercial seguro de Barranquilla.
           </p>
 
-          <!-- Instrumentarium Strip -->
-          <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-xs text-slate-300">
-            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2">
-              <i class="fas fa-microscope text-doc-yellow"></i>
-              <span>Microscopio Trinocular</span>
+          <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-2.5 font-mono text-[11px] sm:text-xs text-slate-300 text-left">
+            <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2">
+              <i class="fas fa-microscope text-doc-yellow shrink-0"></i>
+              <span class="truncate">Microscopio Trinocular</span>
             </div>
-            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2">
-              <i class="fas fa-temperature-arrow-up text-doc-orange"></i>
-              <span>Cámara Infrarroja Térmica</span>
+            <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2">
+              <i class="fas fa-temperature-arrow-up text-doc-orange shrink-0"></i>
+              <span class="truncate">Cámara Térmica FLIR</span>
             </div>
-            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2">
-              <i class="fas fa-wave-square text-doc-cyan"></i>
-              <span>Osciloscopio Digital</span>
-            </div>
-            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2">
-              <i class="fas fa-bath text-emerald-400"></i>
-              <span>Tina de Ultrasonido</span>
-            </div>
-            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2">
-              <i class="fas fa-fire-burner text-amber-400"></i>
-              <span>Estación Quick 861DW</span>
-            </div>
-            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2">
-              <i class="fas fa-lock text-sky-400"></i>
-              <span>Privacidad de Datos 100%</span>
+            <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2">
+              <i class="fas fa-bath text-emerald-400 shrink-0"></i>
+              <span class="truncate">Tina de Ultrasonido</span>
             </div>
           </div>
-
         </div>
 
       </div>
@@ -930,161 +705,28 @@
   </section>
 
   <!-- ============================================================
-       RESEÑAS DE GOOGLE MY BUSINESS (BARRANQUILLA)
+       UBICACIÓN & CONTACTO
        ============================================================ -->
-  <section class="py-20 bg-slate-950 border-t border-slate-800 relative">
+  <section id="contacto" class="py-16 sm:py-20 bg-slate-950 border-t border-slate-800 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs font-mono mb-3">
-          <i class="fab fa-google text-red-400"></i>
-          <span>GOOGLE MY BUSINESS · 4.9 ★★★★★</span>
-        </div>
-        <h2 class="font-tech text-3xl sm:text-4xl font-extrabold text-white">Clientes que Confían en Barranquilla</h2>
-        <p class="text-sm text-slate-400 font-sans mt-2">Opiniones verificadas de clientes en el Centro Comercial Miramar y norte de la ciudad.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         
-        <!-- Review 1 -->
-        <div class="p-6 rounded-2xl bg-dark-card border border-slate-800 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-1 text-doc-yellow text-xs mb-3">
-              ★★★★★
-            </div>
-            <p class="text-xs sm:text-sm text-slate-300 font-sans italic leading-relaxed">
-              "Mi MacBook Pro se recalentaba y los ventiladores sonaban como un avión. Omar le hizo el mantenimiento térmico completo con pasta Artic y quedó completamente silenciosa y fría. Excelente atención en el sótano de Miramar."
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
-            <span class="text-white font-bold">Andrés C. (Riomar)</span>
-            <span class="text-slate-500">Google Review</span>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="p-6 rounded-2xl bg-dark-card border border-slate-800 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-1 text-doc-yellow text-xs mb-3">
-              ★★★★★
-            </div>
-            <p class="text-xs sm:text-sm text-slate-300 font-sans italic leading-relaxed">
-              "Llevé mi iPhone 13 Pro mojado de la playa en Salgar. En otros locales me dijeron que no tenía arreglo y que cambiara de placa. En Doctor Cellphone lo rescataron con su tina de ultrasonido y conservé todas mis fotos intactas."
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
-            <span class="text-white font-bold">Camila V. (Buenavista)</span>
-            <span class="text-slate-500">Google Review</span>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="p-6 rounded-2xl bg-dark-card border border-slate-800 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-1 text-doc-yellow text-xs mb-3">
-              ★★★★★
-            </div>
-            <p class="text-xs sm:text-sm text-slate-300 font-sans italic leading-relaxed">
-              "El servicio de Omar es súper honesto y rápido. Le cambiaron la batería y el puerto a mi Samsung en 40 minutos mientras hacía el súper en el centro comercial. Muy recomendado en Barranquilla."
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
-            <span class="text-white font-bold">Javier P. (Miramar)</span>
-            <span class="text-slate-500">Google Review</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
-       PREGUNTAS FRECUENTES (FAQ ACCORDION)
-       ============================================================ -->
-  <section class="py-20 bg-dark-bg relative">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center mb-12">
-        <span class="text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">RESOLVIENDO DUDAS</span>
-        <h2 class="font-tech text-3xl sm:text-4xl font-extrabold text-white mt-1">Preguntas Frecuentes</h2>
-      </div>
-
-      <div class="space-y-4">
-        
-        <!-- FAQ 1 -->
-        <div class="faq-item rounded-2xl bg-dark-card border border-slate-800 overflow-hidden">
-          <button class="faq-trigger w-full p-5 text-left flex items-center justify-between gap-4 font-tech text-base font-bold text-white hover:text-doc-yellow transition">
-            <span>¿Por qué es indispensable realizarle mantenimiento preventivo a mi celular o laptop en Barranquilla?</span>
-            <i class="faq-icon fas fa-chevron-down text-xs text-doc-yellow transition-transform duration-300"></i>
-          </button>
-          <div class="faq-content hidden p-5 pt-0 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed border-t border-slate-800/60">
-            Barranquilla cuenta con una humedad relativa superior al 80% y una alta concentración de polvo y salinidad ambiental. Esto oxida y sulfata los puertos de carga, reseca la pasta térmica en laptops en menos de 9 meses y obstruye los altavoces. Realizar un mantenimiento preventivo cada 6 u 8 meses evita cortocircuitos irreparables en placa lógica.
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="faq-item rounded-2xl bg-dark-card border border-slate-800 overflow-hidden">
-          <button class="faq-trigger w-full p-5 text-left flex items-center justify-between gap-4 font-tech text-base font-bold text-white hover:text-doc-yellow transition">
-            <span>¿Se borra mi información o fotos al realizar un mantenimiento o cambio de pieza?</span>
-            <i class="faq-icon fas fa-chevron-down text-xs text-doc-yellow transition-transform duration-300"></i>
-          </button>
-          <div class="faq-content hidden p-5 pt-0 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed border-t border-slate-800/60">
-            <strong>No se borra absolutamente nada.</strong> En mantenimientos preventivos, cambios de batería, cambios de pantalla o puertos, tus datos quedan intactos. Además, respetamos tu privacidad: no solicitamos contraseñas personales salvo pruebas puntuales acordadas contigo.
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="faq-item rounded-2xl bg-dark-card border border-slate-800 overflow-hidden">
-          <button class="faq-trigger w-full p-5 text-left flex items-center justify-between gap-4 font-tech text-base font-bold text-white hover:text-doc-yellow transition">
-            <span>¿Qué debo hacer si mi teléfono cayó al agua o a la piscina?</span>
-            <i class="faq-icon fas fa-chevron-down text-xs text-doc-yellow transition-transform duration-300"></i>
-          </button>
-          <div class="faq-content hidden p-5 pt-0 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed border-t border-slate-800/60">
-            <strong>¡No lo conectes a la corriente ni uses arroz!</strong> El arroz desprende almidón que empeora la sulfatación. Apágalo de inmediato y tráelo a Doctor Cellphone en el Sótano del C.C. Miramar. Lo desmontaremos en banco y le daremos un baño en tina ultrasónica con alcohol isopropílico al 99.9% para salvar los circuitos.
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="faq-item rounded-2xl bg-dark-card border border-slate-800 overflow-hidden">
-          <button class="faq-trigger w-full p-5 text-left flex items-center justify-between gap-4 font-tech text-base font-bold text-white hover:text-doc-yellow transition">
-            <span>¿Qué garantía ofrecen en sus servicios técnicos?</span>
-            <i class="faq-icon fas fa-chevron-down text-xs text-doc-yellow transition-transform duration-300"></i>
-          </button>
-          <div class="faq-content hidden p-5 pt-0 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed border-t border-slate-800/60">
-            Todos nuestros servicios y repuestos cuentan con garantía escrita de <strong>30 a 90 días</strong> (según el tipo de componente). Cada equipo pasa por una prueba de 15 puntos de control de calidad antes de su entrega.
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
-       UBICACIÓN, CONTACTO & FORMULARIO
-       ============================================================ -->
-  <section id="contacto" class="py-20 bg-slate-950 border-t border-slate-800 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
-        <!-- Left: Information & Map Link -->
-        <div class="lg:col-span-5">
-          <span class="text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">VISÍTANOS EN BARRANQUILLA</span>
-          <h2 class="font-tech text-3xl font-extrabold text-white mt-1">Ubicación del Taller</h2>
+        <div class="lg:col-span-5 text-center lg:text-left">
+          <span class="text-[10px] sm:text-xs font-mono uppercase text-doc-yellow font-bold tracking-widest">VISÍTANOS EN BARRANQUILLA</span>
+          <h2 class="font-tech text-2xl sm:text-3xl font-extrabold text-white mt-1">Ubicación del Taller</h2>
           
-          <div class="mt-6 space-y-4 text-sm text-slate-300 font-sans">
-            <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-900 border border-slate-800">
-              <i class="fas fa-location-dot text-doc-yellow text-lg mt-1 shrink-0"></i>
+          <div class="mt-5 space-y-3 text-xs sm:text-sm text-slate-300 font-sans text-left">
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+              <i class="fas fa-location-dot text-doc-yellow text-lg mt-0.5 shrink-0"></i>
               <div>
                 <strong class="text-white block font-tech">Centro Comercial Miramar</strong>
                 <p class="text-xs text-slate-400 mt-0.5">Tv. 43 #Calle 99-50, Local 3, Sótano (junto al parqueadero cubierto), Barranquilla, Atlántico.</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-900 border border-slate-800">
-              <i class="fas fa-phone-volume text-emerald-400 text-lg mt-1 shrink-0"></i>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+              <i class="fas fa-phone-volume text-emerald-400 text-lg mt-0.5 shrink-0"></i>
               <div>
                 <strong class="text-white block font-tech">Teléfono & WhatsApp Directo</strong>
                 <p class="text-xs text-slate-400 mt-0.5 font-mono">+57 304 4010187</p>
@@ -1092,66 +734,40 @@
               </div>
             </div>
 
-            <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-900 border border-slate-800">
-              <i class="fas fa-calendar-check text-doc-cyan text-lg mt-1 shrink-0"></i>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+              <i class="fas fa-calendar-check text-doc-cyan text-lg mt-0.5 shrink-0"></i>
               <div>
                 <strong class="text-white block font-tech">Horario de Atención</strong>
-                <p class="text-xs text-slate-400 mt-0.5">Lunes a Sábado: 8:00 AM – 5:00 PM (Jornada Continua)</p>
-                <p class="text-[11px] text-slate-500">Domingos y Festivos: Cerrado para atención en local (WhatsApp disponible para emergencias).</p>
+                <p class="text-xs text-slate-400 mt-0.5">Lunes a Sábado: 8:00 AM – 5:00 PM</p>
               </div>
             </div>
           </div>
-
-          <div class="mt-6">
-            <a href="https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhjemEzQXpibUppGAo" target="_blank" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold border border-slate-700 hover:border-doc-yellow transition flex items-center justify-center gap-2">
-              <i class="fab fa-google text-red-400"></i> Ver Perfil en Google Maps & Business
-            </a>
-          </div>
         </div>
 
-        <!-- Right: Fast Appointment Form -->
         <div class="lg:col-span-7">
-          <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl">
-            <h3 class="font-tech text-2xl font-bold text-white mb-2">Apartar Turno Prioritario de Mantenimiento</h3>
-            <p class="text-xs text-slate-400 font-sans mb-6">Envía los detalles de tu equipo para tener los repuestos y el banco de trabajo listo a tu llegada.</p>
+          <div class="p-5 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-xl">
+            <h3 class="font-tech text-xl sm:text-2xl font-bold text-white mb-1">Apartar Turno Prioritario</h3>
+            <p class="text-xs text-slate-400 font-sans mb-4">Envía los detalles de tu equipo para tener el banco de trabajo listo a tu llegada.</p>
 
-            <form onsubmit="handleContactSubmit(event)" class="space-y-4 font-mono text-xs">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <form onsubmit="handleContactSubmit(event)" class="space-y-3 font-mono text-xs">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label class="block text-slate-400 mb-1.5 uppercase">Tu Nombre Completo</label>
-                  <input type="text" id="contact-name" required placeholder="Ej: Carlos Manzanera" class="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-doc-yellow" />
+                  <label class="block text-slate-400 mb-1 uppercase">Tu Nombre</label>
+                  <input type="text" id="contact-name" required placeholder="Ej: Carlos" class="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-doc-yellow" />
                 </div>
                 <div>
-                  <label class="block text-slate-400 mb-1.5 uppercase">Teléfono / WhatsApp</label>
-                  <input type="tel" id="contact-phone" required placeholder="Ej: 300 1234567" class="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-doc-yellow" />
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-slate-400 mb-1.5 uppercase">Marca y Modelo del Dispositivo</label>
-                  <input type="text" id="contact-device" required placeholder="Ej: iPhone 13 / MacBook Air M2 / Lenovo Legion" class="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-doc-yellow" />
-                </div>
-                <div>
-                  <label class="block text-slate-400 mb-1.5 uppercase">Servicio Requerido</label>
-                  <select id="contact-service" class="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-doc-yellow">
-                    <option value="Mantenimiento Preventivo Quirúrgico">Mantenimiento Preventivo Quirúrgico</option>
-                    <option value="Mantenimiento Térmico PC/Mac (Pasta Artic)">Mantenimiento Térmico PC/Mac (Pasta Artic)</option>
-                    <option value="Cambio de Pantalla Original">Cambio de Pantalla Original</option>
-                    <option value="Cambio de Batería 100%">Cambio de Batería 100%</option>
-                    <option value="Rescate de Equipo Mojado">Rescate de Equipo Mojado</option>
-                    <option value="Falla en Placa / Microsoldadura">Falla en Placa / Microsoldadura</option>
-                  </select>
+                  <label class="block text-slate-400 mb-1 uppercase">WhatsApp</label>
+                  <input type="tel" id="contact-phone" required placeholder="Ej: 300 1234567" class="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-doc-yellow" />
                 </div>
               </div>
 
               <div>
-                <label class="block text-slate-400 mb-1.5 uppercase">Descripción de la Falla o Síntomas</label>
-                <textarea id="contact-notes" rows="3" placeholder="Describe brevemente qué le sucede a tu equipo..." class="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-doc-yellow"></textarea>
+                <label class="block text-slate-400 mb-1 uppercase">Marca y Modelo del Equipo</label>
+                <input type="text" id="contact-device" required placeholder="Ej: iPhone 13 / MacBook Air / Samsung S23" class="w-full bg-slate-950 border border-slate-800 text-white rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-doc-yellow" />
               </div>
 
-              <button type="submit" class="w-full py-3.5 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold font-mono uppercase tracking-wider text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/20">
-                <i class="fab fa-whatsapp text-sm"></i> Enviar Solicitud a WhatsApp de Omar Dias
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold font-mono uppercase tracking-wider text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/20 active:scale-95">
+                <i class="fab fa-whatsapp text-sm"></i> Enviar Solicitud a Omar Dias
               </button>
             </form>
 
@@ -1161,10 +777,8 @@
                 const name = document.getElementById('contact-name').value;
                 const phone = document.getElementById('contact-phone').value;
                 const device = document.getElementById('contact-device').value;
-                const service = document.getElementById('contact-service').value;
-                const notes = document.getElementById('contact-notes').value;
 
-                const msg = `*SOLICITUD PRIORITARIA DE MANTENIMIENTO*%0A%0A• *Cliente:* ${name}%0A• *Teléfono:* ${phone}%0A• *Dispositivo:* ${device}%0A• *Servicio:* ${service}%0A• *Detalle:* ${notes || 'Sin observaciones'}%0A%0A¿Cuándo puedo acercarme al local 3 en el sótano del C.C. Miramar?`;
+                const msg = `*SOLICITUD DE TURNO EN MOSTRADOR*%0A%0A• *Cliente:* ${name}%0A• *Teléfono:* ${phone}%0A• *Dispositivo:* ${device}%0A%0A¿Puedo llevarlo hoy al local 3 sótano del C.C. Miramar?`;
                 window.open(`https://wa.me/573044010187?text=${msg}`, '_blank');
               }
             </script>
@@ -1176,132 +790,92 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
-  <footer class="bg-black text-slate-400 py-12 border-t border-slate-900 text-xs font-mono">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
-        <div class="flex items-center gap-3">
-          <img src="assets/img/doctor-cellphone-logo.png" alt="Doctor Cellphone" class="w-10 h-10 rounded-full border border-doc-yellow" />
-          <div>
-            <h4 class="font-tech text-white text-base font-bold">DOCTOR CELLPHONE</h4>
-            <p class="text-[11px] text-slate-500">Servicio Técnico Especializado · Omar Dias</p>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap items-center justify-center gap-6 text-slate-400">
-          <a href="#mantenimiento" class="hover:text-doc-yellow transition">Mantenimiento</a>
-          <a href="#servicios" class="hover:text-doc-yellow transition">Servicios</a>
-          <a href="#cotizador" class="hover:text-doc-yellow transition">Cotizador</a>
-          <a href="#rastreador" class="hover:text-doc-yellow transition">Rastreador</a>
-          <a href="#tienda" class="hover:text-doc-yellow transition">Accesorios</a>
-          <a href="#contacto" class="hover:text-doc-yellow transition">C.C. Miramar</a>
-        </div>
-
-        <div>
-          <a href="https://wa.me/573044010187" target="_blank" class="text-emerald-400 font-bold hover:underline flex items-center gap-1.5">
-            <i class="fab fa-whatsapp"></i> +57 304 4010187
-          </a>
-        </div>
-      </div>
-
-      <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-        <p>© 2026 Doctor Cellphone. Todos los derechos reservados. Barranquilla, Atlántico, Colombia.</p>
-        <p>Diseño de alta tecnología creado con los estándares de Salman, Av8tor, Umbral y Valeria.</p>
-      </div>
-
+  <!-- FOOTER -->
+  <footer class="bg-black text-slate-500 py-8 border-t border-slate-900 text-[11px] font-mono text-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>© 2026 Doctor Cellphone · Omar Dias. C.C. Miramar Sótano Local 3, Barranquilla, Atlántico.</p>
+      <p class="mt-1 text-slate-600">WhatsApp Oficial: +57 304 4010187</p>
     </div>
   </footer>
 
-  <!-- ============================================================
-       MODAL DE CARRITO DE COMPRAS DE ACCESORIOS
-       ============================================================ -->
+  <!-- MODAL DE CARRITO -->
   <div id="cart-modal" class="fixed inset-0 z-50 modal-overlay hidden flex items-center justify-center p-4">
-    <div class="bg-slate-950 border border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
-      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
-        <h4 class="font-tech text-lg font-bold text-white flex items-center gap-2">
+    <div class="bg-slate-950 border border-slate-800 rounded-2xl max-w-sm sm:max-w-md w-full p-5 shadow-2xl relative">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+        <h4 class="font-tech text-base font-bold text-white flex items-center gap-2">
           <i class="fas fa-shopping-bag text-doc-yellow"></i> Tu Carrito de Accesorios
         </h4>
-        <button id="close-cart-btn" class="w-8 h-8 rounded-lg bg-slate-900 text-slate-400 hover:text-white flex items-center justify-center text-sm">
+        <button id="close-cart-btn" class="w-7 h-7 rounded-lg bg-slate-900 text-slate-400 hover:text-white flex items-center justify-center text-xs">
           <i class="fas fa-times"></i>
         </button>
       </div>
 
-      <!-- Items List -->
-      <div id="cart-items-container" class="my-4 max-h-64 overflow-y-auto space-y-2 pr-1"></div>
+      <div id="cart-items-container" class="my-3 max-h-56 overflow-y-auto space-y-2 pr-1"></div>
 
-      <!-- Total & Checkout -->
-      <div class="pt-4 border-t border-slate-800">
-        <div class="flex items-center justify-between font-mono text-sm mb-4">
+      <div class="pt-3 border-t border-slate-800">
+        <div class="flex items-center justify-between font-mono text-xs mb-3">
           <span class="text-slate-400">Total a pagar:</span>
-          <span id="cart-subtotal" class="font-bold text-doc-yellow text-lg">$0 COP</span>
+          <span id="cart-subtotal" class="font-bold text-doc-yellow text-base">$0 COP</span>
         </div>
 
-        <a id="cart-checkout-btn" href="#" target="_blank" class="w-full py-3 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold font-mono text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/20">
-          <i class="fab fa-whatsapp text-sm"></i> Pedir por WhatsApp a Omar Dias
+        <a id="cart-checkout-btn" href="#" target="_blank" class="w-full py-2.5 rounded-xl bg-doc-yellow hover:bg-doc-yellow-light text-slate-950 font-bold font-mono text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+          <i class="fab fa-whatsapp"></i> Pedir por WhatsApp a Omar Dias
         </a>
       </div>
     </div>
   </div>
 
-  <!-- ============================================================
-       ASISTENTE VIRTUAL IA: DOCBOT (OMAR DIAS IA)
-       ============================================================ -->
-  <!-- Launcher Button -->
-  <div class="fixed bottom-6 right-6 z-50">
-    <button id="chat-launcher" class="chat-launcher relative w-14 h-14 rounded-full bg-slate-950 border-2 border-doc-yellow text-white shadow-2xl glow-yellow flex items-center justify-center overflow-hidden">
+  <!-- ASISTENTE VIRTUAL IA: DOCBOT (OMAR DIAS IA) - Compacto y desplazado para no obstruir botones -->
+  <div class="fixed bottom-4 right-4 z-40 sm:bottom-6 sm:right-6">
+    <button id="chat-launcher" aria-label="Abrir asistente de Omar Dias" class="chat-launcher relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-slate-950 border-2 border-doc-yellow text-white shadow-2xl glow-yellow flex items-center justify-center overflow-hidden">
       <img src="assets/img/avatar-omar.png" alt="Omar Dias Bot" class="w-full h-full object-cover" />
-      <span class="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-slate-950"></span>
+      <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-slate-950"></span>
     </button>
   </div>
 
   <!-- Chat Window -->
-  <div id="chat-window" class="fixed bottom-24 right-4 sm:right-6 z-50 w-[92vw] sm:w-96 rounded-2xl bg-slate-950 border border-slate-800 shadow-2xl hidden overflow-hidden flex flex-col font-sans">
+  <div id="chat-window" class="fixed bottom-20 right-3 sm:right-6 z-50 w-[94vw] sm:w-96 rounded-2xl bg-slate-950 border border-slate-800 shadow-2xl hidden overflow-hidden flex flex-col font-sans">
     
     <!-- Chat Header -->
-    <div class="p-3.5 bg-gradient-to-r from-slate-900 to-slate-950 border-b border-slate-800 flex items-center justify-between">
-      <div class="flex items-center gap-2.5">
-        <div class="relative w-9 h-9 rounded-full overflow-hidden border border-doc-yellow">
+    <div class="p-3 bg-gradient-to-r from-slate-900 to-slate-950 border-b border-slate-800 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="relative w-8 h-8 rounded-full overflow-hidden border border-doc-yellow shrink-0">
           <img src="assets/img/avatar-omar.png" alt="DocBot" class="w-full h-full object-cover" />
         </div>
-        <div>
-          <h4 class="font-tech text-xs font-bold text-white flex items-center gap-1.5">
+        <div class="truncate">
+          <h4 class="font-tech text-xs font-bold text-white flex items-center gap-1.5 truncate">
             DOCBOT · OMAR DIAS IA
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
           </h4>
-          <p class="text-[10px] text-slate-400 font-mono">Asistente Técnico C.C. Miramar</p>
+          <p class="text-[9px] text-slate-400 font-mono truncate">Asistente Técnico C.C. Miramar</p>
         </div>
       </div>
-      <button id="close-chat" class="w-7 h-7 rounded-lg bg-slate-900 text-slate-400 hover:text-white flex items-center justify-center text-xs">
+      <button id="close-chat" class="w-6 h-6 rounded bg-slate-900 text-slate-400 hover:text-white flex items-center justify-center text-xs">
         <i class="fas fa-times"></i>
       </button>
     </div>
 
     <!-- Quick Prompt Chips -->
     <div class="p-2 bg-slate-900/60 border-b border-slate-800 flex gap-1.5 overflow-x-auto text-[10px] font-mono text-slate-300">
-      <button class="chat-chip px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 whitespace-nowrap text-doc-yellow" data-prompt="¿Cuánto cuesta el mantenimiento preventivo?">🛠️ Mantenimiento</button>
-      <button class="chat-chip px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 whitespace-nowrap text-doc-orange" data-prompt="¡Mi celular se cayó al agua!">💧 Mojado</button>
-      <button class="chat-chip px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 whitespace-nowrap text-sky-300" data-prompt="¿Dónde queda el local en Miramar?">📍 Ubicación</button>
-      <button class="chat-chip px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 whitespace-nowrap text-emerald-300" data-prompt="¿Horarios de atención?">⏰ Horarios</button>
+      <button class="chat-chip px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 whitespace-nowrap text-doc-yellow" data-prompt="¿Cuánto cuesta el mantenimiento preventivo?">🛠️ Mantenimiento</button>
+      <button class="chat-chip px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 whitespace-nowrap text-doc-orange" data-prompt="¡Mi celular se cayó al agua!">💧 Mojado</button>
+      <button class="chat-chip px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 whitespace-nowrap text-sky-300" data-prompt="¿Dónde queda el local en Miramar?">📍 Ubicación</button>
     </div>
 
     <!-- Messages Container -->
-    <div id="chat-messages" class="p-4 h-72 overflow-y-auto space-y-2 text-xs">
-      <!-- Welcome message -->
-      <div class="flex gap-2.5 mb-3">
-        <div class="w-7 h-7 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center shrink-0 text-xs font-bold font-mono">DR</div>
-        <div class="max-w-[82%] rounded-2xl px-3.5 py-2.5 text-xs bg-slate-800 text-slate-200 border border-slate-700/60 rounded-tl-none shadow">
-          <p class="leading-relaxed">¡Hola! Soy <strong>DocBot</strong>, el asistente técnico de <strong>Omar Dias</strong> en Doctor Cellphone (C.C. Miramar). ¿En qué podemos ayudarte hoy? ¿Mantenimiento preventivo, cambio de pantalla, equipo mojado o accesorios?</p>
+    <div id="chat-messages" class="p-3 h-64 overflow-y-auto space-y-2 text-xs">
+      <div class="flex gap-2 mb-2">
+        <div class="w-6 h-6 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center shrink-0 text-[10px] font-bold font-mono">DR</div>
+        <div class="max-w-[85%] rounded-2xl px-3 py-2 text-xs bg-slate-800 text-slate-200 border border-slate-700/60 rounded-tl-none shadow">
+          <p class="leading-relaxed">¡Hola! Soy <strong>DocBot</strong> de <strong>Doctor Cellphone</strong>. ¿Necesitas cotizar mantenimiento, reparar pantalla o dejarnos un equipo mojado en el local 3 de Miramar?</p>
         </div>
       </div>
     </div>
 
     <!-- Input Bar -->
-    <div class="p-3 bg-slate-900 border-t border-slate-800 flex items-center gap-2">
-      <input type="text" id="chat-input" placeholder="Escribe tu consulta aquí..." class="flex-1 bg-slate-950 border border-slate-700 text-white rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-doc-yellow font-sans" />
-      <button id="send-btn" class="w-9 h-9 rounded-xl bg-doc-yellow text-slate-950 flex items-center justify-center text-xs hover:bg-doc-yellow-light transition">
+    <div class="p-2.5 bg-slate-900 border-t border-slate-800 flex items-center gap-2">
+      <input type="text" id="chat-input" placeholder="Escribe tu consulta..." class="flex-1 bg-slate-950 border border-slate-700 text-white rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-doc-yellow font-sans" />
+      <button id="send-btn" class="w-8 h-8 rounded-xl bg-doc-yellow text-slate-950 flex items-center justify-center text-xs hover:bg-doc-yellow-light transition shrink-0">
         <i class="fas fa-paper-plane"></i>
       </button>
     </div>
